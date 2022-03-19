@@ -34,3 +34,54 @@ export const BgImage = styled.div`
   left: 0;
   z-index: -1;
 `;
+
+export const CTA = styled.div`
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  img {
+    &:first-child {
+      margin-bottom: 12px;
+      max-width: 600px;
+      min-height: 1px;
+      display: block;
+      width: 100%;
+    }
+    &:last-child {
+      max-width: 600px;
+      margin-bottom: 20px;
+      display: inline-block;
+      vertical-align: bottom;
+      width: 100%;
+    }
+  }
+
+  p {
+    color: hsla(0, 0%, 95.3%, 1);
+    font-size: 11px;
+    margin: 0 0 24px;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+  }
+`;
+
+export const SignUp = styled.a`
+  font-weight: bold;
+  color: #f9f9f9;
+  background-color: #0063e5;
+  margin-bottom: 12px;
+  width: 100%;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  padding: 16.5px 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0483ee;
+  }
+`;
