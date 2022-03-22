@@ -1,8 +1,14 @@
+import ImgSlider from "../ImgSlider";
+import Viewers from "../Viewers";
+
+import { Container } from "./styles";
+
 const Home = () => {
   return (
-    <div>
-      <div>home</div>
-    </div>
+    <Container>
+      <ImgSlider />
+      <Viewers />
+    </Container>
   );
 };
 
