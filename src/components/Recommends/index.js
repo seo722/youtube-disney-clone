@@ -1,15 +1,19 @@
 import { Container, Content, Wrap } from "./styles";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectRecommend } from "../../features/movie/movieSlice";
+// import { selectRecommend } from "../../features/movie/movieSlice";
 
-const Recommends = () => {
-  const movies = useSelector(selectRecommend);
+const Recommends = ({ select }) => {
+  const movies = useSelector(select);
   console.log(movies, ":🛢️");
 
   return (
     <Container>
-      <h4>Recommended for you</h4>
+      <h4>
+        {movies?.slice(0, 1).map((movie) => (
+          <span>{movie.type}</span>
+        ))}
+      </h4>
       <Content>
         {movies &&
           movies.map((movie, key) => {
