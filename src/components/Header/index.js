@@ -8,7 +8,7 @@ import {
   DropDown,
 } from "./styles";
 import { useDispatch, userSelector, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth, provider } from "../../firebase";
 import {
   selectUserName,
@@ -23,6 +23,7 @@ const Header = () => {
   const history = useNavigate();
   const userName = useSelector(selectUserName);
   const userPhoto = useSelector(selectUserPhoto);
+  console.log(userPhoto);
 
   useEffect(() => {
     auth.onAuthStateChanged(async (user) => {
@@ -72,10 +73,10 @@ const Header = () => {
       ) : (
         <>
           <NavMenu>
-            <a href="/home">
+            <Link to="/home">
               <img src="/images/home-icon.svg" alt="HOME" />
               <span>HOME</span>
-            </a>
+            </Link>
             <a>
               <img src="/images/search-icon.svg" alt="SEARCH" />
               <span>SEARCH</span>
